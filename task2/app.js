@@ -1,12 +1,9 @@
 $(function(){
 				$("#root").append('<ul>');
-        $("ul").append('<li>');
-        $("li").append('<span>Сделать задание #3 по web-программированию</span>');
-	      var r= $('<input id = "main" type="button" value="Удалить"/>');
-        $("li").append(r);
-        $("#main").click(function(){
+       	       var element = $('<li> <span></span> <button id="main"> Удалить </button> </li>');
+          $('span', element).text("Сделать задание #3 по web-программированию");
+          $("ul").append(element);
+       $("#main").click(function(){
         	$(this).parent().remove()
         });
-
-              });
 })
